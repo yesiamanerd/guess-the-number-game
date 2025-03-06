@@ -4,6 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="numberGenerator" class="com.yesiamanerd.NumberGeneratorImpl" />
+    <bean id="game" class="com.yesiamanerd.GameImpl">
+<!--        ** Setter based dependency injection ** -->
+        <property name="numberGenerator" ref="numberGenerator" />
 
+<!--        ** Constructor based dependency injection ** -->
+<!--        <constructor-arg ref="numberGenerator" />-->
+    </bean>
 
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 </beans>
