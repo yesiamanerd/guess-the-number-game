@@ -2,6 +2,7 @@ package com.yesiamanerd;
 
 import java.util.Random;
 
+
 public class NumberGeneratorImpl implements NumberGenerator {
     private final Random random = new Random();
     private int maxNumber = 100;
